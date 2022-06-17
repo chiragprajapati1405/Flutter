@@ -11,7 +11,10 @@ class HomePage extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          child: Text('Welcome Chirag'),
+          child: Text(
+            'Welcome Chirag',
+            style: TextStyle(fontSize: 30),
+          ),
         ),
       ),
       drawer: Drawer(),
