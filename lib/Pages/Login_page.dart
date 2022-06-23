@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -6,13 +8,50 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      child: Center(
-        child: Text("Login Page",
-            style: TextStyle(
-                fontSize: 40,
-                color: Colors.deepOrange,
-                fontWeight: FontWeight.bold)),
-      ),
+      color: Colors.white,
+      child: Column(children: [
+        Image.asset(
+          "Assets/Images/Login_page.png",
+          fit: BoxFit.cover,
+        ),
+        const SizedBox(
+          height: 20.0,
+        ),
+        const Text(
+          "Welcome",
+          style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 32.0),
+          child: Column(
+            children: [
+              TextFormField(
+                decoration: const InputDecoration(
+                  hintText: "Enter Username",
+                  labelText: "Username",
+                ),
+              ),
+              TextFormField(
+                obscureText: true,
+                decoration: const InputDecoration(
+                  hintText: "Enter Password",
+                  labelText: "Password",
+                ),
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              ElevatedButton(
+                child: const Text("Login"),
+                style: TextButton.styleFrom(),
+                onPressed: () {
+                  print("Hi Chirag");
+                },
+              )
+            ],
+          ),
+        ),
+      ]),
     );
   }
 }
